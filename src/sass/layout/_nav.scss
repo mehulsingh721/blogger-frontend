@@ -20,9 +20,14 @@ header{
             list-style: none;
             font-size: 1.4rem;
             align-items: center;
-            a{
+            a,.logout{
                 color: #CCD6F6;
                 text-decoration: none;
+                cursor: pointer;
+            }
+            .active{
+                font-weight: 500;
+                color: #5F85DB;
             }
         }
         .login-btn{

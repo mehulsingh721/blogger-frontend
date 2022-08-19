@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const cookies = new Cookies
 const MyBlog = () => {
-  const {userId} = useParams()
+  const {id} = useParams()
   const [userName, setUserName] = useState("")
   const [blogs, setBlogs] = useState([])
   const [editor, setEditor] = useState(false)
@@ -22,7 +22,7 @@ const MyBlog = () => {
 
   const getUserData = () => {
     const params = {
-      userId: 20
+      userId: id
     }
     axios.get("http://localhost:8000/api/blogs/user", {
       params: params
@@ -69,7 +69,7 @@ const MyBlog = () => {
     }).then((res) => {
       if(res.status === 200){
         getUserData()
-        toggleBlogEditor()
+        toggleBlogEditEditor()
       }
     })
   }
@@ -114,8 +114,8 @@ const MyBlog = () => {
         <h1 className="heading-1"><span>{userName}'s Blogs!!</span></h1>
         <div className="blog__items">
           {blogs.map((blog, index) => 
-           <div>
-            <div key={blog.id} className="blog__items--item">
+           <div key={blog.id}>
+            <div className="blog__items--item">
               <h3>{blog.title}</h3>
               <p>{blog.excerpt}</p>
               <div>

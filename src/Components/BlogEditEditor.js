@@ -63,7 +63,7 @@ const BlogEditEditor = (props) => {
         </div>
 
         <div className="editor__modal--row-4">
-          <button onClick={submit} className="btn">Add Blog</button>
+          <button onClick={submit} className="btn">Update Blog</button>
         </div>
       </div>
     </div>

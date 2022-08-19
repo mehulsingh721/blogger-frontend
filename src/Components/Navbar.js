@@ -1,21 +1,29 @@
 import { NavLink } from "react-router-dom"
 import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import Cookies from 'universal-cookie';
 import { useEffect } from "react";
  
 const cookies = new Cookies();
 const Navbar = () => {
+  const navigate = useNavigate()
+
+  const logout = () => {
+    cookies.remove("auth_token")
+    cookies.remove("userId")
+    navigate("/login")
+  }
   return(
     <header>
       <nav className="nav">
         <div className="nav__logo">Blogger</div>
         <ul className="nav__links">
-          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink className={({ isActive }) => (isActive ? "active" : "inactive")} to="/">Home</NavLink></li>
           {
             cookies.get("userId") !== undefined ? 
             <>
-              <li><NavLink to={`/my-blog/${cookies.get("userId")}`}>My Blog</NavLink></li>
-              <li><NavLink to="/logout">Logout</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "active" : "inactive")} to={`/my-blog/${cookies.get("userId")}`}>My Blog</NavLink></li>
+              <li className="logout" onClick={logout}>Logout</li>
             </>
             :
             <li className="login-btn"><NavLink to="/login">Login To Create Your Own Blog</NavLink></li>

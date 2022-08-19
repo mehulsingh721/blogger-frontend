@@ -103,9 +103,13 @@ header {
       list-style: none;
       font-size: 1.4rem;
       align-items: center; }
-      header .nav__links a {
+      header .nav__links a, header .nav__links .logout {
         color: #CCD6F6;
-        text-decoration: none; }
+        text-decoration: none;
+        cursor: pointer; }
+      header .nav__links .active {
+        font-weight: 500;
+        color: #5F85DB; }
     header .nav .login-btn {
       background-color: #5F85DB;
       padding: .8rem 1rem;

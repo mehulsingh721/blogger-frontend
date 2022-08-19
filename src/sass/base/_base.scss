@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px;
+}
+
+body {
+    /* Total borders or paddings are not added to total height of an element */
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    background-color: #26282B;
+    a{
+        text-decoration: none;
+        font-family: "Inter", sans-serif;
+    }
+}

@@ -1,0 +1,28 @@
+.registration{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    grid-gap: 3rem;
+    height: 100vh;
+    &__form{
+        display: grid;
+        grid-gap: 2rem;
+        width: max-content;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        input, button{
+            padding: 1.53rem 2rem;
+            width: 40rem;
+            border-radius: 9px;
+            font-size: 1.563rem;
+            font-family: "Inter", sans-serif;
+        }
+
+        input{
+            background: #fcfcfc;
+            border: 1px solid #b6b6b6;
+        }
+    }
+}

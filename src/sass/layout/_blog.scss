@@ -1,0 +1,31 @@
+.blog{
+    background-color: #26282B;
+    .heading-1{
+        color: #CCD6F6;
+        font-size: 12rem;
+        display: flex;
+        border-bottom: 1px solid #8892B0;
+        padding: 5rem 0;
+        span{
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
+.add-blog{
+    position: fixed;
+    background-color: #5F85DB;
+    border: none;
+    border-radius: 50%;
+    font-size: 4rem;
+    font-weight: 600;
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    left: 95%;
+    top: 90%;
+    cursor: pointer;
+}

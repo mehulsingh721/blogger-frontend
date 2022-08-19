@@ -223,6 +223,14 @@ button {
     .login .seprator p {
       font-size: 1.953rem;
       padding: 0 1.5rem; }
+  .login .invalid {
+    font-size: 1.6rem;
+    color: white;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    padding: .8rem 1rem; }
 
 .btn-register {
   background-color: #2C3333;

@@ -50,6 +50,15 @@ button{
             padding: 0 1.5rem;
         }
     }
+    .invalid{
+        font-size: 1.6rem;
+        color: white;
+        background-color: red;
+        width:100%;
+        text-align: center;
+        border-radius: 4px;
+        padding: .8rem 1rem;
+    }
 }
 .btn-register{
     background-color: #2C3333;

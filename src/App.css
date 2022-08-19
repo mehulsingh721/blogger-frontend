@@ -85,10 +85,10 @@ body {
 header {
   width: 100%;
   background-color: #26282B;
-  padding: 2rem;
+  padding: 2rem 0;
   z-index: 1; }
   header .nav {
-    width: 80%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,8 +122,43 @@ header {
     border-bottom: 1px solid #8892B0;
     padding: 5rem 0; }
     .blog .heading-1 span {
-      width: 80%;
+      width: 50%;
       margin: auto; }
+  .blog__items {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem; }
+    .blog__items--item {
+      background-color: #2A2C2F;
+      padding: 2rem; }
+      .blog__items--item h3 {
+        font-size: 1.8rem;
+        color: #CCD6F6; }
+      .blog__items--item p {
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+        color: #8892b0;
+        margin-bottom: 1.5rem; }
+      .blog__items--item div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .blog__items--item div a {
+          font-size: 1.4rem;
+          text-decoration: none;
+          color: #5f85db; }
+        .blog__items--item div svg {
+          color: #CCD6F6;
+          height: 1.2rem; }
+        .blog__items--item div .actions {
+          display: flex;
+          column-gap: 2rem;
+          align-items: center; }
+          .blog__items--item div .actions div {
+            cursor: pointer; }
 
 .add-blog {
   position: fixed;
@@ -221,3 +256,16 @@ button {
     .registration__form input {
       background: #fcfcfc;
       border: 1px solid #b6b6b6; }
+
+.single-blog {
+  width: 50%;
+  margin: auto;
+  margin-top: 5rem; }
+  .single-blog h1 {
+    font-size: 6rem;
+    color: #CCD6F6;
+    text-decoration: underline; }
+  .single-blog div {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    color: #8892b0; }

@@ -27,7 +27,7 @@ function Register() {
       'Accept': 'application/json',
     }
     try {
-      await axios.post('http://localhost:8000/api/register', data, headers).then((res) => {
+      await axios.post('api/register', data, headers).then((res) => {
         console.log(res)
         if(res.status===200){
           handleCookie(res.data.accessToken, res.data.userId);

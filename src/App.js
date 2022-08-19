@@ -1,4 +1,3 @@
-import Navbar from './Components/Navbar';
 import Home from "./Pages/Home"
 import Login from './Pages/Login';
 import MyBlog from './Pages/MyBlog';
@@ -6,7 +5,7 @@ import Register from './Pages/Register';
 import SingleBlog from './Pages/SingleBlog';
 import ProtectedRoute from "./ProtectedRoutes"
 import './App.css';
-import { Routes, Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (

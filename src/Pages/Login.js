@@ -22,7 +22,7 @@ function Login() {
       password: password
     }
     //make axios post request
-    await axios.post("http://localhost:8000/api/login", data, {
+    await axios.post("api/login", data, {
       headers: {
         "Content-Type": "application/json"
       }

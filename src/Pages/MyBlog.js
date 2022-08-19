@@ -7,7 +7,7 @@ import BlogEditEditor from "../Components/BlogEditEditor";
 import Cookies from "universal-cookie"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const cookies = new Cookies
+const cookies = new Cookies()
 const MyBlog = () => {
   const {id} = useParams()
   const [userName, setUserName] = useState("")
@@ -18,13 +18,14 @@ const MyBlog = () => {
    
   useEffect(() => {
     getUserData()
+   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const getUserData = () => {
     const params = {
       userId: id
     }
-    axios.get("http://localhost:8000/api/blogs/user", {
+    axios.get("api/blogs/user", {
       params: params
     }).then((res) => {
       setUserName(res.data.username)
@@ -38,7 +39,7 @@ const MyBlog = () => {
       excerpt: excerpt,
       body: content
     }
-    axios.post("http://localhost:8000/api/blogs/create", data, {
+    axios.post("api/blogs/create", data, {
       headers: {
         Authorization: `Bearer ${cookies.get("auth_token")}`
       },
@@ -59,7 +60,7 @@ const MyBlog = () => {
       excerpt: excerpt,
       body: content
     }
-    axios.put("http://localhost:8000/api/blogs/update", data, {
+    axios.put("api/blogs/update", data, {
       headers: {
         Authorization: `Bearer ${cookies.get("auth_token")}`,
       },
@@ -75,7 +76,7 @@ const MyBlog = () => {
   }
 
   const deleteBlog = (id) => {
-    axios.delete("http://localhost:8000/api/blogs/delete", {
+    axios.delete("api/blogs/delete", {
       headers: {
         Authorization: `Bearer ${cookies.get("auth_token")}`,
       },

@@ -14,7 +14,7 @@ const SingleBlog = () => {
   }, [])
 
   const getBlog = () => {
-    axios.get("http://localhost:8000/api/blogs/blog", {
+    axios.get("api/blogs/blog", {
       // headers: {
       //   Content-Type: "application/json"
       // },

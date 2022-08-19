@@ -11,7 +11,7 @@ const Home = () => {
   }, [])
 
   const getUserData = () => {
-    axios.get("http://localhost:8000/api/blogs").then((res) => {
+    axios.get("api/blogs").then((res) => {
       console.log(res.data)
       setBlogs(res.data)
     })

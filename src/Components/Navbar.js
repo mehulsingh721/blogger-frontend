@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom"
-import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import Cookies from 'universal-cookie';
-import { useEffect } from "react";
  
 const cookies = new Cookies();
 const Navbar = () => {
